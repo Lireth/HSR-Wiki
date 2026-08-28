@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300">
+  <defs>
+    <pattern id="dg" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="24" fill="#000" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="240" height="300" fill="#1f2937"/>
+  <rect width="240" height="300" fill="url(#dg)"/>
+  <polygon points="120.0,56.0 138.3,104.9 190.4,107.1 149.6,139.6 163.5,189.9 120.0,161.1 76.5,189.9 90.4,139.6 49.6,107.1 101.7,104.9" fill="#FFFDF5" stroke="#000" stroke-width="6" transform="rotate(10 120 130)"/>
+  <text x="120" y="248" font-family="'Noto Sans SC',sans-serif" font-size="22" font-weight="900" text-anchor="middle" fill="#FFFDF5" stroke="#000" stroke-width="5" paint-order="stroke">于夜色中</text>
+  <rect x="6" y="6" width="228" height="288" fill="none" stroke="#000" stroke-width="5"/>
+</svg>
