@@ -1,4 +1,6 @@
+import { useMemo } from "react";
 import { PATHS } from "../../data/colors";
+import { LIGHTCONES } from "../../data/lightcones";
 import type { LightConeRarity } from "../../types/lightcone";
 import { NeoButton, NeoCheckbox, NeoInput, NeoSelect } from "../neo";
 import { useArrayParam, useClearParams, useStringParam } from "../../hooks/useQueryFilters";
@@ -9,12 +11,14 @@ export function LightConeFilters() {
   const [raritiesRaw, toggleRarity] = useArrayParam("rarities");
   const [sort, setSort] = useStringParam("sort", "rarity-desc");
   const clearAll = useClearParams();
+  // 仅显示当前图鉴中有实装数据的命途，与 wiki 筛选表行为一致
+  const availablePaths = useMemo(() => PATHS.filter((p) => LIGHTCONES.some((c) => c.path === p)), []);
 
   return (
     <div className="mb-8 border-4 border-black bg-white p-4 shadow-neo-md">
       <NeoInput placeholder="搜索光锥名称 / 命途 / 技能效果 / 评价…" value={keyword} onChange={(e) => setKeyword(e.target.value)} aria-label="搜索光锥" />
       <div className="mt-4 flex flex-wrap gap-2">
-        {PATHS.map((p) => (
+        {availablePaths.map((p) => (
           <NeoCheckbox key={p} checked={paths.includes(p)} onChange={() => togglePath(p)} label={p} />
         ))}
       </div>
