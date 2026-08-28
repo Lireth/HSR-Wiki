@@ -12,10 +12,13 @@ export const patienceIsAllYouNeed: LightCone = {
     valuesBySuperimposition: [[24, 4.8, 60], [28, 5.6, 70], [32, 6.4, 80], [36, 7.2, 90], [40, 8, 100]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "黯淡黑曜", count: 4 },
+  { name: "虚空黑曜", count: 12 },
+  { name: "沉沦黑曜", count: 15 },
   ],
   recommendedCharacters: [
     { id: "kafka", reason: "专属光锥，【游丝】视作触电，与引爆体系天作之合。" },

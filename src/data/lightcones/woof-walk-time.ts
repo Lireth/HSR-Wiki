@@ -12,10 +12,13 @@ export const woofWalkTime: LightCone = {
     valuesBySuperimposition: [[10, 16], [12, 20], [15, 24], [17, 28], [20, 32]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 118000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 308000 },
+  { name: "铁卫扣饰", count: 15 },
+  { name: "铁卫军徽", count: 15 },
+  { name: "铁卫勋章", count: 12 },
+  { name: "破碎残刃", count: 3 },
+  { name: "无生残刃", count: 9 },
+  { name: "净世残刃", count: 12 },
   ],
   recommendedCharacters: [
     { id: "luka", reason: "裂伤施加者，双段增伤与自身机制天然契合。" },

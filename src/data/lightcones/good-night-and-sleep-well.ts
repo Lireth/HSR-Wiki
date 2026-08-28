@@ -12,10 +12,13 @@ export const goodNightAndSleepWell: LightCone = {
     valuesBySuperimposition: [12, 15, 18, 21, 24],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 118000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 308000 },
+  { name: "铁卫扣饰", count: 15 },
+  { name: "铁卫军徽", count: 15 },
+  { name: "铁卫勋章", count: 12 },
+  { name: "黯淡黑曜", count: 3 },
+  { name: "虚空黑曜", count: 9 },
+  { name: "沉沦黑曜", count: 12 },
   ],
   recommendedCharacters: [
     { id: "kafka", reason: "触电与队友负面效果叠加，满层增伤收益极高。" },

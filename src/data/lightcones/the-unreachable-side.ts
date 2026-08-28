@@ -12,10 +12,13 @@ export const theUnreachableSide: LightCone = {
     valuesBySuperimposition: [[24, 12, 9, 80], [28, 14, 10.5, 85], [32, 16, 12, 90], [36, 18, 13.5, 95], [40, 20, 15, 100]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "破碎残刃", count: 4 },
+  { name: "无生残刃", count: 12 },
+  { name: "净世残刃", count: 15 },
   ],
   recommendedCharacters: [
     { id: "blade", reason: "专属光锥，生命上限与烧血增伤机制完全绑定。" },

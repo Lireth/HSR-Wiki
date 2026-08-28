@@ -12,10 +12,13 @@ export const geniusesRepose: LightCone = {
     valuesBySuperimposition: [[16, 24], [20, 30], [24, 36], [28, 42], [32, 48]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 118000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 308000 },
+  { name: "铁卫扣饰", count: 15 },
+  { name: "铁卫军徽", count: 15 },
+  { name: "铁卫勋章", count: 12 },
+  { name: "灵感之钥", count: 3 },
+  { name: "启迪之钥", count: 9 },
+  { name: "智识之钥", count: 12 },
   ],
   recommendedCharacters: [
     { id: "herta", reason: "斩杀线触发天赋追加攻击，击杀后暴伤收益稳定。" },

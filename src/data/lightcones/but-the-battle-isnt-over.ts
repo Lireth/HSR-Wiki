@@ -12,10 +12,13 @@ export const butTheBattleIsntOver: LightCone = {
     valuesBySuperimposition: [30, 35, 40, 45, 50],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "谐乐小调", count: 4 },
+  { name: "家族颂歌", count: 12 },
+  { name: "群星乐章", count: 15 },
   ],
   recommendedCharacters: [
     { id: "bronya", reason: "专属光锥，再动体系与战技点回收收益拉满。" },

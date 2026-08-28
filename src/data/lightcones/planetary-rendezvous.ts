@@ -12,10 +12,13 @@ export const planetaryRendezvous: LightCone = {
     valuesBySuperimposition: [12, 15, 18, 21, 24],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 118000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 308000 },
+  { name: "铁卫扣饰", count: 15 },
+  { name: "铁卫军徽", count: 15 },
+  { name: "铁卫勋章", count: 12 },
+  { name: "谐乐小调", count: 3 },
+  { name: "家族颂歌", count: 9 },
+  { name: "群星乐章", count: 12 },
   ],
   recommendedCharacters: [
     { id: "asta", reason: "火属性辅助，与火属性主C同队时提供稳定增伤。" },

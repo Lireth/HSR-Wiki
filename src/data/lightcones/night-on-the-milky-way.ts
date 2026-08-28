@@ -12,10 +12,13 @@ export const nightOnTheMilkyWay: LightCone = {
     valuesBySuperimposition: [[9, 30], [10.5, 35], [12, 40], [13.5, 45], [15, 50]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "灵感之钥", count: 4 },
+  { name: "启迪之钥", count: 12 },
+  { name: "智识之钥", count: 15 },
   ],
   recommendedCharacters: [
     { id: "himeko", reason: "专属池光锥，群攻弱点击破环境收益最大化。" },

@@ -12,10 +12,13 @@ export const momentOfVictory: LightCone = {
     valuesBySuperimposition: [24, 28, 32, 36, 40],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "青铜的执着", count: 4 },
+  { name: "寒铁的誓言", count: 12 },
+  { name: "琥珀的坚守", count: 15 },
   ],
   recommendedCharacters: [
     { id: "gepard", reason: "专属光锥，防御转护盾量与受击回能全面强化。" },

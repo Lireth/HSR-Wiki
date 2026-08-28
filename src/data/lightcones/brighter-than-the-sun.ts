@@ -12,10 +12,13 @@ export const brighterThanTheSun: LightCone = {
     valuesBySuperimposition: [[18, 18, 6], [21, 21, 7], [24, 24, 8], [27, 27, 9], [30, 30, 10]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "破碎残刃", count: 4 },
+  { name: "无生残刃", count: 12 },
+  { name: "净世残刃", count: 15 },
   ],
   recommendedCharacters: [
     { id: "danhenglunae", reason: "专属光锥，多段强化普攻下攻击与回能叠满。" },

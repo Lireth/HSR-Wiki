@@ -12,10 +12,13 @@ export const anInstantBeforeAGaze: LightCone = {
     valuesBySuperimposition: [[36, 0.36], [42, 0.42], [48, 0.48], [54, 0.54], [60, 0.6]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "铁卫扣饰", count: 12 },
-    { name: "铁卫军徽", count: 18 },
-    { name: "铁卫勋章", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "灵感之钥", count: 4 },
+  { name: "启迪之钥", count: 12 },
+  { name: "智识之钥", count: 15 },
   ],
   recommendedCharacters: [
     { id: "argenti", reason: "专属光锥，能量上限 180 点，终结技增伤收益最大化。" },

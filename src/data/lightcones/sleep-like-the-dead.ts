@@ -12,10 +12,13 @@ export const sleepLikeTheDead: LightCone = {
     valuesBySuperimposition: [[30, 36], [35, 42], [40, 48], [45, 54], [50, 60]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "猎兽之矢", count: 12 },
-    { name: "屠魔之矢", count: 18 },
-    { name: "逐星之矢", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "猎兽之矢", count: 4 },
+  { name: "屠魔之矢", count: 12 },
+  { name: "逐星之矢", count: 15 },
   ],
   recommendedCharacters: [
     { id: "seele", reason: "高额暴伤与未暴击补偿，输出下限稳定。" },

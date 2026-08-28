@@ -12,10 +12,13 @@ export const inTheNight: LightCone = {
     valuesBySuperimposition: [[18, 6, 12], [21, 7, 14], [24, 8, 16], [27, 9, 18], [30, 10, 20]],
   },
   ascensionMaterials: [
-    { name: "信用点", count: 148000 },
-    { name: "猎兽之矢", count: 12 },
-    { name: "屠魔之矢", count: 18 },
-    { name: "逐星之矢", count: 54 },
+  { name: "信用点", count: 385000 },
+  { name: "铁卫扣饰", count: 20 },
+  { name: "铁卫军徽", count: 20 },
+  { name: "铁卫勋章", count: 14 },
+  { name: "猎兽之矢", count: 4 },
+  { name: "屠魔之矢", count: 12 },
+  { name: "逐星之矢", count: 15 },
   ],
   recommendedCharacters: [
     { id: "seele", reason: "专属光锥，速度收益与暴击完美适配。" },
