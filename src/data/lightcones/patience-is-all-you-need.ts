@@ -24,5 +24,5 @@ export const patienceIsAllYouNeed: LightCone = {
   ],
   rating: 5,
   review: "5★ 虚无持续伤害光锥，卡芙卡专属。增伤与速度叠层兼顾循环，持续伤害体系的顶级选择。",
-  art: "/assets/lightcones/patience-is-all-you-need.svg",
+  art: "/assets/lightcones/patience-is-all-you-need.png",
 };

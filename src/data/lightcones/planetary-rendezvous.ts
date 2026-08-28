@@ -23,5 +23,5 @@ export const planetaryRendezvous: LightCone = {
   ],
   rating: 3,
   review: "4★ 和谐光锥。同属性队伍增伤稳定，元素辅助佩戴可强化属性队输出。",
-  art: "/assets/lightcones/planetary-rendezvous.svg",
+  art: "/assets/lightcones/planetary-rendezvous.png",
 };

@@ -7,9 +7,9 @@ export const inTheNight: LightCone = {
   path: "巡猎",
   baseStats: { hp: 1058, atk: 582, def: 463 },
   skill: {
-    name: "碾磨之夜",
-    description: "使装备者的暴击率提高 {0}%，装备者在战斗速度大于 100/120/140 时，普攻与战技造成的伤害额外提高 {1}%。",
-    valuesBySuperimposition: [[18, 12], [21, 14], [24, 16], [27, 18], [30, 20]],
+    name: "花与蝶",
+    description: "使装备者的暴击率提高 {0}%。装备者在战斗中速度大于 100 时，每提高 10 点，普攻与战技造成的伤害额外提高 {1}%；速度大于 120 时，每提高 10 点，终结技造成的暴击伤害额外提高 {2}%。",
+    valuesBySuperimposition: [[18, 6, 12], [21, 7, 14], [24, 8, 16], [27, 9, 18], [30, 10, 20]],
   },
   ascensionMaterials: [
     { name: "信用点", count: 148000 },
@@ -23,5 +23,5 @@ export const inTheNight: LightCone = {
   ],
   rating: 5,
   review: "巡猎命途顶级光锥。堆速度即可吃满全部加成，与希儿等高速主C联动极强，抽到即毕业。",
-  art: "/assets/lightcones/in-the-night.svg",
+  art: "/assets/lightcones/in-the-night.png",
 };

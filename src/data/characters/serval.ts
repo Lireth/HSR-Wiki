@@ -42,7 +42,7 @@ export const serval: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，加快触电施加与附加伤害频率。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，强化群攻爆发。" },
   ],
-  portrait: "/assets/characters/serval.svg",
+  portrait: "/assets/characters/serval.png",
   color: "#C084FC",
   tags: ["持续伤害", "群攻", "触电"],
 };

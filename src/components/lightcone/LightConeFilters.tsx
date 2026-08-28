@@ -12,7 +12,7 @@ export function LightConeFilters() {
 
   return (
     <div className="mb-8 border-4 border-black bg-white p-4 shadow-neo-md">
-      <NeoInput placeholder="搜索光锥名称 / 技能…" value={keyword} onChange={(e) => setKeyword(e.target.value)} aria-label="搜索光锥" />
+      <NeoInput placeholder="搜索光锥名称 / 命途 / 技能效果 / 评价…" value={keyword} onChange={(e) => setKeyword(e.target.value)} aria-label="搜索光锥" />
       <div className="mt-4 flex flex-wrap gap-2">
         {PATHS.map((p) => (
           <NeoCheckbox key={p} checked={paths.includes(p)} onChange={() => togglePath(p)} label={p} />

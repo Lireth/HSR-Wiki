@@ -22,5 +22,5 @@ export const brighterThanTheSun: LightCone = {
   ],
   rating: 5,
   review: "5★ 毁灭光锥，丹恒•饮月专属。暴击、攻击与回能全面强化高频普攻输出循环。",
-  art: "/assets/lightcones/brighter-than-the-sun.svg",
+  art: "/assets/lightcones/brighter-than-the-sun.png",
 };

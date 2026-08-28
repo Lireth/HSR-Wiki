@@ -42,7 +42,7 @@ export const luocha: Character = {
     { set: "云无留迹的过客", piece: "4件套", reason: "治疗量提升并在施放战技后回复能量，治疗位毕业配置。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "攻击力提升直接放大治疗量，兼顾客场辅助。" },
   ],
-  portrait: "/assets/characters/luocha.svg",
+  portrait: "/assets/characters/luocha.png",
   color: "#FDE047",
   tags: ["治疗", "自动触发", "驱散"],
 };

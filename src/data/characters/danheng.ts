@@ -42,7 +42,7 @@ export const danheng: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，普攻强化契合其单体输出循环。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "提供暴击率与终结技增伤，补足输出面板。" },
   ],
-  portrait: "/assets/characters/danheng.svg",
+  portrait: "/assets/characters/danheng.png",
   color: "#6EE7B7",
   tags: ["输出", "单体", "减速"],
 };

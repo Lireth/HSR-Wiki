@@ -42,7 +42,7 @@ export const argenti: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，终结技爆发的面板基础。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，完美契合终结技输出模式。" },
   ],
-  portrait: "/assets/characters/argenti.svg",
+  portrait: "/assets/characters/argenti.png",
   color: "#E8E4D9",
   tags: ["输出", "群攻", "终结技"],
 };

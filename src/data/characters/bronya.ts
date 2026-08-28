@@ -36,13 +36,13 @@ export const bronya: Character = {
   ],
   recommendedLightCones: [
     { id: "but-the-battle-isnt-over", reason: "专属光锥，战技点回复与增伤完美契合其再动机制。" },
-    { id: "memories-of-the-past", reason: "4★ 选择，攻击加成与回能加速终结技循环。" },
+    { id: "memories-of-the-past", reason: "4★ 选择，击破特攻与回能加速终结技循环。" },
   ],
   recommendedRelics: [
     { set: "骇域漫游的信使", piece: "4件套", reason: "提高速度并在施放终结技后为全队提速，抢先为队友再动。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "全队攻击力提升，辅助毕业配置。" },
   ],
-  portrait: "/assets/characters/bronya.svg",
+  portrait: "/assets/characters/bronya.png",
   color: "#6EE7B7",
   tags: ["辅助", "再动", "增伤"],
 };

@@ -42,7 +42,7 @@ export const pela: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "速度提升保证先手挂减防，攻击加成兼顾削韧输出。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，补足辅助位的面板收益。" },
   ],
-  portrait: "/assets/characters/pela.svg",
+  portrait: "/assets/characters/pela.png",
   color: "#7DD3FC",
   tags: ["辅助", "减防", "驱散"],
 };

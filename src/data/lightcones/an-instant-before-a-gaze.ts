@@ -23,5 +23,5 @@ export const anInstantBeforeAGaze: LightCone = {
   ],
   rating: 5,
   review: "5★ 智识终结技光锥，银枝专属。能量上限越高终结技增伤越夸张，高耗能爆发角色的毕业选择。",
-  art: "/assets/lightcones/an-instant-before-a-gaze.svg",
+  art: "/assets/lightcones/an-instant-before-a-gaze.png",
 };

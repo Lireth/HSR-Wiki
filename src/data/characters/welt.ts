@@ -8,7 +8,7 @@ export const welt: Character = {
   path: "虚无",
   faction: "星穹列车",
   description: "星穹列车上老成持重的前辈乘客，以虚数之力减缓并禁锢敌人，兼任输出与控制的核心。",
-  stats: { hp: 1165, atk: 702, def: 485, speed: 102, critRate: 5, critDmg: 50, taunt: 100, energy: 120 },
+  stats: { hp: 1125, atk: 620, def: 509, speed: 102, critRate: 5, critDmg: 50, taunt: 100, energy: 120 },
   skills: [
     { type: "普攻", name: "重力压制", description: "对指定敌方单体造成等同于瓦尔特攻击力 50% 的虚数属性伤害。" },
     { type: "战技", name: "虚空断界", description: "对指定敌方单体造成攻击力 36% 的虚数属性伤害，并额外弹射 2 次随机单体的伤害，每次攻击有概率使受击者速度降低 10%，持续 2 回合。" },
@@ -42,7 +42,7 @@ export const welt: Character = {
     { set: "白云归处", piece: "4件套", reason: "虚数伤害提升，对被减速敌人进一步增伤，契合其减速机制。" },
     { set: "泛银河商业公司", piece: "2件套", reason: "效果命中与攻击加成，提高减速与禁锢的命中率。" },
   ],
-  portrait: "/assets/characters/welt.svg",
+  portrait: "/assets/characters/welt.png",
   color: "#FDE047",
   tags: ["输出", "控制", "减速"],
 };

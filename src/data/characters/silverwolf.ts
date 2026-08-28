@@ -42,7 +42,7 @@ export const silverwolf: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "速度提升保证先手植入弱点，掌控全队输出节奏。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，兼顾减防手的伤害贡献。" },
   ],
-  portrait: "/assets/characters/silverwolf.svg",
+  portrait: "/assets/characters/silverwolf.png",
   color: "#818CF8",
   tags: ["辅助", "弱点植入", "减防"],
 };

@@ -5,11 +5,11 @@ export const sharedFeeling: LightCone = {
   name: "同一种心情",
   rarity: 4,
   path: "丰饶",
-  baseStats: { hp: 984, atk: 470, def: 396 },
+  baseStats: { hp: 952, atk: 423, def: 396 },
   skill: {
-    name: "感同身受",
-    description: "使装备者的治疗量提高 {0}%，装备者施放战技或终结技后，使我方全体恢复 2 点能量。",
-    valuesBySuperimposition: [10, 12, 14, 16, 18],
+    name: "救治与维修",
+    description: "使装备者的治疗量提高 {0}%。当装备者施放战技时，为我方全体恢复 {1} 点能量。",
+    valuesBySuperimposition: [[10, 2], [12, 2.5], [15, 3], [17, 3.5], [20, 4]],
   },
   ascensionMaterials: [
     { name: "信用点", count: 118000 },
@@ -20,5 +20,5 @@ export const sharedFeeling: LightCone = {
   recommendedCharacters: [{ id: "bailu", reason: "治疗量与全队回能双重收益，强化持续续航。" }],
   rating: 3,
   review: "4★ 丰饶辅助光锥。治疗量提升外还附带全队回能，白露等治疗位的优质过渡装。",
-  art: "/assets/lightcones/shared-feeling.svg",
+  art: "/assets/lightcones/shared-feeling.png",
 };

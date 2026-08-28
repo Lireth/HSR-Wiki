@@ -24,5 +24,5 @@ export const danceDanceDance: LightCone = {
   ],
   rating: 4,
   review: "4★ 和谐体系神卡。终结技后全队行动提前，轮次经济价值极高，几乎适配所有辅助。",
-  art: "/assets/lightcones/dance-dance-dance.svg",
+  art: "/assets/lightcones/dance-dance-dance.png",
 };

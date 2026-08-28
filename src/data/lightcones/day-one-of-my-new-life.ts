@@ -24,5 +24,5 @@ export const dayOneOfMyNewLife: LightCone = {
   ],
   rating: 4,
   review: "4★ 存护光锥。防御与全队抗性双重收益，杰帕德等护盾角色的平民优选。",
-  art: "/assets/lightcones/day-one-of-my-new-life.svg",
+  art: "/assets/lightcones/day-one-of-my-new-life.png",
 };

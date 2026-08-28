@@ -42,7 +42,7 @@ export const danhenglunae: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "普攻与战技伤害加成，契合多段强化普攻输出模式。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，补足爆发面板。" },
   ],
-  portrait: "/assets/characters/danhenglunae.svg",
+  portrait: "/assets/characters/danhenglunae.png",
   color: "#FDE047",
   tags: ["输出", "爆发", "战技点消耗"],
 };

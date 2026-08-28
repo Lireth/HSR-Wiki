@@ -8,6 +8,7 @@ import { CompareTable } from "../components/character/CompareTable";
 import { NeoButton } from "../components/neo";
 import { CHARACTERS } from "../data/characters";
 import { filterCharacters, getCharactersByIds } from "../services/characterService";
+import type { CharacterSortKey } from "../services/characterService";
 import type { Element, Path, Rarity } from "../types/character";
 import { useArrayParam, useStringParam } from "../hooks/useQueryFilters";
 
@@ -17,6 +18,7 @@ export default function CharactersPage() {
   const [elements] = useArrayParam("elements");
   const [paths] = useArrayParam("paths");
   const [raritiesRaw] = useArrayParam("rarities");
+  const [sort] = useStringParam("sort", "rarity-desc");
   const [compare, , clearCompare] = useArrayParam("compare");
 
   const filtered = useMemo(
@@ -26,6 +28,7 @@ export default function CharactersPage() {
         elements: elements as Element[],
         paths: paths as Path[],
         rarities: raritiesRaw.map(Number).filter((r): r is Rarity => r === 4 || r === 5),
+        sort: sort as CharacterSortKey,
       }),
     [params]
   );
@@ -45,6 +48,7 @@ export default function CharactersPage() {
     <>
       <PageHeader title="角色图鉴" badge="CHARACTERS" description="按属性、命途、星级筛选，选择两名角色进行对比。" />
       <CharacterFilters />
+      <p className="mb-4 text-sm font-bold text-neutral-600">共 {filtered.length} 名角色</p>
       {compareChars.length === 2 && <CompareTable a={compareChars[0]} b={compareChars[1]} />}
       {filtered.length === 0 ? (
         <div className="border-4 border-black bg-white p-10 text-center shadow-neo-md">

@@ -5,11 +5,11 @@ export const landauSChoice: LightCone = {
   name: "朗道的选择",
   rarity: 4,
   path: "存护",
-  baseStats: { hp: 1016, atk: 470, def: 429 },
+  baseStats: { hp: 952, atk: 423, def: 396 },
   skill: {
-    name: "钢铁意志",
-    description: "使装备者受到敌方攻击的几率提高 24%，受到的伤害降低 {0}%。",
-    valuesBySuperimposition: [16, 17, 18, 19, 20],
+    name: "时光如梭",
+    description: "使装备者受到敌方目标攻击的几率提高 16%，受到的伤害降低 {0}%。",
+    valuesBySuperimposition: [16, 18, 20, 22, 24],
   },
   ascensionMaterials: [
     { name: "信用点", count: 118000 },
@@ -23,5 +23,5 @@ export const landauSChoice: LightCone = {
   ],
   rating: 3,
   review: "4★ 生存向光锥。拉高嘲讽与减伤帮助护盾手稳定承伤，缺 5★ 存护锥时的可靠过渡。",
-  art: "/assets/lightcones/landau-s-choice.svg",
+  art: "/assets/lightcones/landau-s-choice.png",
 };

@@ -42,7 +42,7 @@ export const sushang: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，普攻与剑势输出循环的核心配置。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，补足单体爆发面板。" },
   ],
-  portrait: "/assets/characters/sushang.svg",
+  portrait: "/assets/characters/sushang.png",
   color: "#E8E4D9",
   tags: ["输出", "单体", "附加伤害"],
 };

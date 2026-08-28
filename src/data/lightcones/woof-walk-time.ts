@@ -24,5 +24,5 @@ export const woofWalkTime: LightCone = {
   ],
   rating: 3,
   review: "4★ 毁灭光锥。攻击力常驻加成，灼烧或裂伤体系下增伤可观，卢卡、桂乃芬等角色的低配良品。",
-  art: "/assets/lightcones/woof-walk-time.svg",
+  art: "/assets/lightcones/woof-walk-time.png",
 };

@@ -24,5 +24,5 @@ export const nightOnTheMilkyWay: LightCone = {
   ],
   rating: 4,
   review: "5★ 智识清杂光锥。敌人越多攻击加成越高，配合弱点击破的额外增伤，姬子、黑塔等群攻角色的优选。",
-  art: "/assets/lightcones/night-on-the-milky-way.svg",
+  art: "/assets/lightcones/night-on-the-milky-way.png",
 };

@@ -42,7 +42,7 @@ export const yukong: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "速度提升保证增益覆盖，攻击加成兼顾客场输出。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "全队攻击力提升，与天赋加攻效果叠加。" },
   ],
-  portrait: "/assets/characters/yukong.svg",
+  portrait: "/assets/characters/yukong.png",
   color: "#FDE047",
   tags: ["辅助", "加攻", "暴击提升"],
 };

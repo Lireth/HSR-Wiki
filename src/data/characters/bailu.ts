@@ -8,7 +8,7 @@ export const bailu: Character = {
   path: "丰饶",
   faction: "仙舟罗浮",
   description: "仙舟罗浮持明族的尊长，有「衔药龙女」之称的医士，可群体治疗并让队友免于倒下。",
-  stats: { hp: 1206, atk: 582, def: 485, speed: 98, critRate: 5, critDmg: 50, taunt: 100, energy: 100 },
+  stats: { hp: 1319, atk: 562, def: 485, speed: 98, critRate: 5, critDmg: 50, taunt: 100, energy: 100 },
   skills: [
     { type: "普攻", name: "望、闻、问…蹴！", description: "对指定敌方单体造成等同于白露攻击力 50% 的雷属性伤害。" },
     { type: "战技", name: "云吟乍涌坠珠露", description: "为指定我方单体及其相邻目标治疗 3 次，每次治疗量依次递减。" },
@@ -42,7 +42,7 @@ export const bailu: Character = {
     { set: "云无留迹的过客", piece: "4件套", reason: "治疗量提升并在施放战技后回复能量，奶妈毕业配置。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "提高生命上限并增益全队攻击，兼顾生存与辅助。" },
   ],
-  portrait: "/assets/characters/bailu.svg",
+  portrait: "/assets/characters/bailu.png",
   color: "#C084FC",
   tags: ["治疗", "辅助", "免死"],
 };

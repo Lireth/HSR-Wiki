@@ -42,7 +42,7 @@ export const kafka: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，持续伤害与追加攻击的核心面板。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，兼顾引爆爆发的直伤部分。" },
   ],
-  portrait: "/assets/characters/kafka.svg",
+  portrait: "/assets/characters/kafka.png",
   color: "#C084FC",
   tags: ["持续伤害", "追加攻击", "群攻"],
 };

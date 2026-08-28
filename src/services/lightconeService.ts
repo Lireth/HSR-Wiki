@@ -21,7 +21,7 @@ export function filterLightCones(cones: LightCone[], f: LightConeFilters): Light
   const result = cones.filter((c) => {
     if (f.paths?.length && !f.paths.includes(c.path)) return false;
     if (f.rarities?.length && !f.rarities.includes(c.rarity)) return false;
-    if (kw && !`${c.name} ${c.skill.name}`.toLowerCase().includes(kw)) return false;
+    if (kw && !`${c.name} ${c.skill.name} ${c.path} ${c.skill.description} ${c.review}`.toLowerCase().includes(kw)) return false;
     return true;
   });
   const sorted = [...result];

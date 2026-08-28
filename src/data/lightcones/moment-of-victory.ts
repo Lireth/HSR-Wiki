@@ -5,9 +5,9 @@ export const momentOfVictory: LightCone = {
   name: "制胜的瞬间",
   rarity: 5,
   path: "存护",
-  baseStats: { hp: 1058, atk: 532, def: 496 },
+  baseStats: { hp: 1058, atk: 476, def: 595 },
   skill: {
-    name: "决胜时刻",
+    name: "决断",
     description: "使装备者的防御力提高 {0}%，装备者受到敌方攻击后额外恢复 4 点能量。",
     valuesBySuperimposition: [24, 28, 32, 36, 40],
   },
@@ -24,5 +24,5 @@ export const momentOfVictory: LightCone = {
   ],
   rating: 4,
   review: "存护通用毕业光锥。高额防御加成与受击回能兼顾生存与技能循环，杰帕德携带收益最大。",
-  art: "/assets/lightcones/moment-of-victory.svg",
+  art: "/assets/lightcones/moment-of-victory.png",
 };

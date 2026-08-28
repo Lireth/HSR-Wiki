@@ -24,5 +24,5 @@ export const timeWaitsForNoOne: LightCone = {
   ],
   rating: 5,
   review: "5★ 丰饶毕业光锥。生命与治疗量双提升，记录治疗量的附加伤害让治疗位也有可观输出贡献。",
-  art: "/assets/lightcones/time-waits-for-no-one.svg",
+  art: "/assets/lightcones/time-waits-for-no-one.png",
 };

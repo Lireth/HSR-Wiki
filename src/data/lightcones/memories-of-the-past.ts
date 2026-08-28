@@ -5,11 +5,11 @@ export const memoriesOfThePast: LightCone = {
   name: "记忆中的模样",
   rarity: 4,
   path: "和谐",
-  baseStats: { hp: 952, atk: 476, def: 396 },
+  baseStats: { hp: 952, atk: 423, def: 396 },
   skill: {
-    name: "岁月回响",
-    description: "使装备者的击破特攻提高 {0}%，装备者对敌方目标造成击破伤害后，额外恢复 3 点能量。",
-    valuesBySuperimposition: [20, 24, 28, 32, 36],
+    name: "老相片",
+    description: "使装备者的击破特攻提高 {0}%。当装备者施放攻击后，额外恢复 {1} 点能量。",
+    valuesBySuperimposition: [[28, 4], [35, 5], [42, 6], [49, 7], [56, 8]],
   },
   ascensionMaterials: [
     { name: "信用点", count: 118000 },
@@ -20,5 +20,5 @@ export const memoriesOfThePast: LightCone = {
   recommendedCharacters: [{ id: "tingyun", reason: "高频攻击稳定触发击破回能，终结技循环大幅提速。" }],
   rating: 4,
   review: "4★ 和谐回能神器。击破特攻加持下，停云等高频辅助的终结技循环显著提速，平民首选。",
-  art: "/assets/lightcones/memories-of-the-past.svg",
+  art: "/assets/lightcones/memories-of-the-past.png",
 };

@@ -42,7 +42,7 @@ export const sampo: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，强化持续伤害的频率与数值。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，补足面板输出。" },
   ],
-  portrait: "/assets/characters/sampo.svg",
+  portrait: "/assets/characters/sampo.png",
   color: "#6EE7B7",
   tags: ["持续伤害", "群攻", "行动延后"],
 };

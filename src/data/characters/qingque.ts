@@ -42,7 +42,7 @@ export const qingque: Character = {
     { set: "密林卧游的观星者", piece: "4件套", reason: "量子伤害与无视防御，量子主C通用输出配置。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，补足爆发面板。" },
   ],
-  portrait: "/assets/characters/qingque.svg",
+  portrait: "/assets/characters/qingque.png",
   color: "#818CF8",
   tags: ["输出", "群攻", "随机强化"],
 };

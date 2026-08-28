@@ -24,5 +24,5 @@ export const goodNightAndSleepWell: LightCone = {
   ],
   rating: 5,
   review: "4★ 虚无神卡。满层 72% 增伤且对持续伤害生效，负面效果体系的最优四星选择，叠影收益极高。",
-  art: "/assets/lightcones/good-night-and-sleep-well.svg",
+  art: "/assets/lightcones/good-night-and-sleep-well.png",
 };

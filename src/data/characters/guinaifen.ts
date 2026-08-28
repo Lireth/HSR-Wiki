@@ -42,7 +42,7 @@ export const guinaifen: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，强化灼烧施加频率与数值。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "攻击力提升直接放大持续伤害，兼顾辅助增伤。" },
   ],
-  portrait: "/assets/characters/guinaifen.svg",
+  portrait: "/assets/characters/guinaifen.png",
   color: "#FF9F45",
   tags: ["持续伤害", "易伤", "群攻"],
 };

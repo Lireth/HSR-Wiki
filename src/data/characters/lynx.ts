@@ -42,7 +42,7 @@ export const lynx: Character = {
     { set: "云无留迹的过客", piece: "4件套", reason: "治疗量提升并在施放战技后回复能量。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "提高生命上限并增益全队攻击，兼顾生存与辅助。" },
   ],
-  portrait: "/assets/characters/lynx.svg",
+  portrait: "/assets/characters/lynx.png",
   color: "#818CF8",
   tags: ["治疗", "生命上限", "解除负面"],
 };

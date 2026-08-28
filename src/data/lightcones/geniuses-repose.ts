@@ -23,5 +23,5 @@ export const geniusesRepose: LightCone = {
   ],
   rating: 3,
   review: "4★ 智识光锥。攻击加成常驻，击杀后暴伤加成契合清杂补刀节奏，过渡期表现优秀。",
-  art: "/assets/lightcones/geniuses-repose.svg",
+  art: "/assets/lightcones/geniuses-repose.png",
 };

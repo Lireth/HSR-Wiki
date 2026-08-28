@@ -42,7 +42,7 @@ export const blade: Character = {
     { set: "生命的庭园", piece: "4件套", reason: "生命上限提升直接强化伤害与生存，烧血流核心配置。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "生命上限提升，兼顾生存容错与面板输出。" },
   ],
-  portrait: "/assets/characters/blade.svg",
+  portrait: "/assets/characters/blade.png",
   color: "#6EE7B7",
   tags: ["输出", "消耗生命", "追加攻击"],
 };

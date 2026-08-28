@@ -42,7 +42,7 @@ export const asta: Character = {
     { set: "生命的庭园", piece: "4件套", reason: "提高生命与速度，保证辅助增益的稳定覆盖。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "全队攻击力提升，与天赋叠加攻击力协同。" },
   ],
-  portrait: "/assets/characters/asta.svg",
+  portrait: "/assets/characters/asta.png",
   color: "#FF9F45",
   tags: ["辅助", "全队加速", "加攻"],
 };

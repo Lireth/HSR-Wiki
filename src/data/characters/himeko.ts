@@ -8,7 +8,7 @@ export const himeko: Character = {
   path: "智识",
   faction: "星穹列车",
   description: "星穹列车的科学家兼冒险家，擅长以灼烧与追击清场，是弱点火敌人的克星。",
-  stats: { hp: 1165, atk: 717, def: 485, speed: 102, critRate: 5, critDmg: 50, taunt: 125, energy: 120 },
+  stats: { hp: 1047, atk: 756, def: 436, speed: 96, critRate: 5, critDmg: 50, taunt: 125, energy: 120 },
   skills: [
     { type: "普攻", name: "鏖战", description: "对指定敌方单体造成等同于姬子攻击力 50% 的火属性伤害。" },
     { type: "战技", name: "熔核爆裂", description: "对指定敌方单体造成等同于姬子攻击力 55% 的火属性伤害，对相邻目标造成的伤害减半，并有概率使其陷入【灼烧】状态。" },
@@ -42,7 +42,7 @@ export const himeko: Character = {
     { set: "沉陷的地下虎", piece: "4件套", reason: "火属性伤害提升并强化终结技后的输出，适配群攻循环。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "提供暴击率与增伤，补足追击面板。" },
   ],
-  portrait: "/assets/characters/himeko.svg",
+  portrait: "/assets/characters/himeko.png",
   color: "#FF9F45",
   tags: ["输出", "群攻", "追击"],
 };

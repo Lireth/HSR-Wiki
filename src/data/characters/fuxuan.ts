@@ -31,7 +31,7 @@ export const fuxuan: Character = {
     { name: "工造机杼", count: 41 },
     { name: "工造迴轮", count: 56 },
     { name: "工造浑心", count: 58 },
-    { name: "无穷假身遗恨", count: 12 },
+    { name: "无穷假身的遗恨", count: 12 },
     { name: "命运的足迹", count: 8 },
   ],
   recommendedLightCones: [
@@ -42,7 +42,7 @@ export const fuxuan: Character = {
     { set: "戍卫风雪的铁卫", piece: "4件套", reason: "减伤并在低生命时回复，契合穷观阵的承伤机制。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "提高生命上限并增益全队攻击，兼顾生存与辅助。" },
   ],
-  portrait: "/assets/characters/fuxuan.svg",
+  portrait: "/assets/characters/fuxuan.png",
   color: "#818CF8",
   tags: ["辅助", "减伤", "增益"],
 };

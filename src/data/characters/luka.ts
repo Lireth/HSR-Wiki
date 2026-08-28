@@ -42,7 +42,7 @@ export const luka: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，强化裂伤施加与直冲碎天拳输出。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，补足易伤爆发面板。" },
   ],
-  portrait: "/assets/characters/luka.svg",
+  portrait: "/assets/characters/luka.png",
   color: "#E8E4D9",
   tags: ["持续伤害", "易伤", "强化普攻"],
 };

@@ -36,13 +36,13 @@ export const arlan: Character = {
   ],
   recommendedLightCones: [
     { id: "something-irreplaceable", reason: "5★ 毁灭光锥，低生命状态下的增伤与续航契合其烧血机制。" },
-    { id: "mutual-demise", reason: "3★ 低配选择，生命值越低伤害越高，与残血玩法天然契合。" },
+    { id: "mutual-demise", reason: "3★ 低配选择，对高生命值目标稳定增伤，适合单体攻坚。" },
   ],
   recommendedRelics: [
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，强化雷属性单体输出循环。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与终结技增伤，补足爆发面板。" },
   ],
-  portrait: "/assets/characters/arlan.svg",
+  portrait: "/assets/characters/arlan.png",
   color: "#C084FC",
   tags: ["输出", "消耗生命", "残血增伤"],
 };

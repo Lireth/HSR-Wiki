@@ -24,5 +24,5 @@ export const sleepLikeTheDead: LightCone = {
   ],
   rating: 4,
   review: "5★ 巡猎光锥。高额暴伤外加未暴击补偿机制，输出下限稳定，希儿等巡猎主C的通用备选。",
-  art: "/assets/lightcones/sleep-like-the-dead.svg",
+  art: "/assets/lightcones/sleep-like-the-dead.png",
 };

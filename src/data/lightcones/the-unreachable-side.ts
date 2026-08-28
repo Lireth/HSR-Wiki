@@ -23,5 +23,5 @@ export const theUnreachableSide: LightCone = {
   ],
   rating: 5,
   review: "5★ 生命型毁灭光锥，刃的专属。生命上限、能量回复与全队增伤一应俱全，烧血体系毕业装。",
-  art: "/assets/lightcones/the-unreachable-side.svg",
+  art: "/assets/lightcones/the-unreachable-side.png",
 };

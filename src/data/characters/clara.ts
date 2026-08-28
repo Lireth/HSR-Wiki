@@ -36,13 +36,13 @@ export const clara: Character = {
   ],
   recommendedLightCones: [
     { id: "something-irreplaceable", reason: "专属光锥，受击回复与增伤契合其反击坦克定位。" },
-    { id: "mutual-demise", reason: "3★ 过渡选择，提供攻击力加成，前期可用。" },
+    { id: "mutual-demise", reason: "3★ 过渡选择，对高血量目标稳定增伤，前期可用。" },
   ],
   recommendedRelics: [
     { set: "街头出身的拳王", piece: "4件套", reason: "物理伤害提升并强化追加攻击，完美适配史瓦罗的反击机制。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "提供暴击率与终结技增伤，补足反击面板。" },
   ],
-  portrait: "/assets/characters/clara.svg",
+  portrait: "/assets/characters/clara.png",
   color: "#E8E4D9",
   tags: ["输出", "反击", "坦克"],
 };

@@ -27,7 +27,7 @@ export function filterCharacters(chars: Character[], f: CharacterFilters): Chara
     if (f.paths?.length && !f.paths.includes(c.path)) return false;
     if (f.rarities?.length && !f.rarities.includes(c.rarity)) return false;
     if (kw) {
-      const hay = `${c.name} ${c.faction} ${c.tags.join(" ")}`.toLowerCase();
+      const hay = `${c.name} ${c.faction} ${c.element} ${c.path} ${c.description} ${c.tags.join(" ")}`.toLowerCase();
       if (!hay.includes(kw)) return false;
     }
     return true;

@@ -8,7 +8,7 @@ export const jingyuan: Character = {
   path: "智识",
   faction: "仙舟罗浮",
   description: "仙舟联盟帝弓七天将之一，节制罗浮云骑军的「神策将军」，谈笑间指挥神君降下雷霆。",
-  stats: { hp: 1165, atk: 643, def: 485, speed: 99, critRate: 5, critDmg: 50, taunt: 125, energy: 130 },
+  stats: { hp: 1164, atk: 698, def: 485, speed: 99, critRate: 5, critDmg: 50, taunt: 125, energy: 130 },
   skills: [
     { type: "普攻", name: "电霓", description: "对指定敌方单体造成等同于景元攻击力 50% 的雷属性伤害。" },
     { type: "战技", name: "石移三更", description: "对指定敌方单体及其相邻目标造成等同于景元攻击力 50% 的雷属性伤害，同时强化神君。" },
@@ -42,7 +42,7 @@ export const jingyuan: Character = {
     { set: "沉陷的地下虎", piece: "4件套", reason: "雷属性伤害提升，释放终结技后进一步增伤，适配神君群体输出。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "提供暴击率与终结技增伤，补足面板。" },
   ],
-  portrait: "/assets/characters/jingyuan.svg",
+  portrait: "/assets/characters/jingyuan.png",
   color: "#C084FC",
   tags: ["输出", "群攻", "召唤物"],
 };

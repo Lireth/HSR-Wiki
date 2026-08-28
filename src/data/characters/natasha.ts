@@ -42,7 +42,7 @@ export const natasha: Character = {
     { set: "云无留迹的过客", piece: "4件套", reason: "治疗量提升并在施放战技后回复能量，治疗位毕业配置。" },
     { set: "不老者的仙舟", piece: "2件套", reason: "提高生命上限并增益全队攻击，兼顾生存与辅助。" },
   ],
-  portrait: "/assets/characters/natasha.svg",
+  portrait: "/assets/characters/natasha.png",
   color: "#E8E4D9",
   tags: ["治疗", "持续回复", "辅助"],
 };

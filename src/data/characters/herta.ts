@@ -42,7 +42,7 @@ export const herta: Character = {
     { set: "野穗伴行的快枪手", piece: "4件套", reason: "攻击力与速度提升，强化群攻与追加攻击输出。" },
     { set: "停转的萨尔索图", piece: "2件套", reason: "暴击率与追加攻击增伤，完美契合天赋斩杀机制。" },
   ],
-  portrait: "/assets/characters/herta.svg",
+  portrait: "/assets/characters/herta.png",
   color: "#7DD3FC",
   tags: ["输出", "群攻", "追加攻击"],
 };
