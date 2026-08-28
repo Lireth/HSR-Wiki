@@ -1,4 +1,6 @@
+import { useMemo } from "react";
 import { ELEMENTS, ELEMENT_COLORS, PATHS } from "../../data/colors";
+import { CHARACTERS } from "../../data/characters";
 import { NeoButton, NeoCheckbox, NeoInput, NeoSelect } from "../neo";
 import type { Rarity } from "../../types/character";
 import { useArrayParam, useClearParams, useStringParam } from "../../hooks/useQueryFilters";
@@ -10,6 +12,8 @@ export function CharacterFilters() {
   const [rarities, toggleRarity] = useArrayParam("rarities");
   const [sort, setSort] = useStringParam("sort", "rarity-desc");
   const clearAll = useClearParams();
+  // 仅显示当前图鉴中有实装数据的命途，与 wiki 筛选表行为一致
+  const availablePaths = useMemo(() => PATHS.filter((p) => CHARACTERS.some((c) => c.path === p)), []);
 
   return (
     <div className="mb-8 border-4 border-black bg-white p-4 shadow-neo-md">
@@ -20,7 +24,7 @@ export function CharacterFilters() {
         ))}
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
-        {PATHS.map((p) => (
+        {availablePaths.map((p) => (
           <NeoCheckbox key={p} checked={paths.includes(p)} onChange={() => togglePath(p)} label={p} />
         ))}
       </div>
