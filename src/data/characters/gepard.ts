@@ -8,7 +8,7 @@ export const gepard: Character = {
   path: "存护",
   faction: "贝洛伯格·银鬃铁卫",
   description: "银鬃铁卫的戍卫官，贝洛伯格数一数二的战士，以全队护盾守护同伴的钢铁壁垒。",
-  stats: { hp: 1397, atk: 543, def: 654, speed: 92, critRate: 5, critDmg: 50, taunt: 150, energy: 100 },
+  stats: { hp: 1397, atk: 543, def: 654, speed: 92, critRate: 5, critDmg: 50, taunt: 125, energy: 100 },
   skills: [
     { type: "普攻", name: "凛冬之矛", description: "对指定敌方单体造成等同于杰帕德攻击力 50% 的冰属性伤害。" },
     { type: "战技", name: "恸哭冰霜", description: "对指定敌方单体造成等同于杰帕德攻击力 100% 的冰属性伤害，并有基础概率使其陷入【冻结】状态。" },

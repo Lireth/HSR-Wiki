@@ -8,7 +8,7 @@ export const clara: Character = {
   path: "毁灭",
   faction: "贝洛伯格·下层区",
   description: "与机械「史瓦罗」相依为命的孤儿，以受击反击的战斗方式对敌方释放高额伤害。",
-  stats: { hp: 1241, atk: 737, def: 485, speed: 90, critRate: 5, critDmg: 50, taunt: 125, energy: 110 },
+  stats: { hp: 1241, atk: 737, def: 485, speed: 90, critRate: 5, critDmg: 50, taunt: 75, energy: 110 },
   skills: [
     { type: "普攻", name: "征伐的先兆", description: "对指定敌方单体造成等同于克拉拉攻击力 50% 的物理属性伤害。" },
     { type: "战技", name: "注视着你", description: "对敌方全体造成等同于克拉拉攻击力 55% 的物理属性伤害，并使史瓦罗的反击伤害提高，持续 2 回合。" },

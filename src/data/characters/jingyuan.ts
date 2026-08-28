@@ -8,7 +8,7 @@ export const jingyuan: Character = {
   path: "智识",
   faction: "仙舟罗浮",
   description: "仙舟联盟帝弓七天将之一，节制罗浮云骑军的「神策将军」，谈笑间指挥神君降下雷霆。",
-  stats: { hp: 1164, atk: 698, def: 485, speed: 99, critRate: 5, critDmg: 50, taunt: 125, energy: 130 },
+  stats: { hp: 1164, atk: 698, def: 485, speed: 99, critRate: 5, critDmg: 50, taunt: 100, energy: 130 },
   skills: [
     { type: "普攻", name: "电霓", description: "对指定敌方单体造成等同于景元攻击力 50% 的雷属性伤害。" },
     { type: "战技", name: "石移三更", description: "对指定敌方单体及其相邻目标造成等同于景元攻击力 50% 的雷属性伤害，同时强化神君。" },

@@ -1,5 +1,5 @@
 export type Element = "物理" | "火" | "冰" | "雷" | "风" | "量子" | "虚数";
-export type Path = "毁灭" | "巡猎" | "智识" | "和谐" | "虚无" | "存护" | "丰饶" | "记忆";
+export type Path = "毁灭" | "巡猎" | "智识" | "和谐" | "虚无" | "存护" | "丰饶" | "记忆" | "欢愉";
 export type Rarity = 4 | 5;
 
 export interface Material {

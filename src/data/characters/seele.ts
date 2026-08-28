@@ -8,7 +8,7 @@ export const seele: Character = {
   path: "巡猎",
   faction: "贝洛伯格·下层区",
   description: "下层区的「蝴蝶」……在夜色中穿行的量子巡猎者，击破敌人后可获得再次行动的机会。",
-  stats: { hp: 931, atk: 640, def: 363, speed: 115, critRate: 5, critDmg: 50, taunt: 100, energy: 120 },
+  stats: { hp: 931, atk: 640, def: 363, speed: 115, critRate: 5, critDmg: 50, taunt: 75, energy: 120 },
   skills: [
     { type: "普攻", name: "幻镰", description: "对指定敌方单体造成等同于希儿攻击力 50% 的量子属性伤害。" },
     { type: "战技", name: "幻蝶", description: "对指定敌方单体造成等同于希儿攻击力 110% 的量子属性伤害，并被【割裂】状态覆盖。" },

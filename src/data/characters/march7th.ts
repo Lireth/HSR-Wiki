@@ -8,7 +8,7 @@ export const march7th: Character = {
   path: "存护",
   faction: "星穹列车",
   description: "被星穹列车从冰块中救起的失忆少女，用相机记录旅途，以单体护盾与冻结守护同伴。",
-  stats: { hp: 1058, atk: 511, def: 573, speed: 101, critRate: 5, critDmg: 50, taunt: 100, energy: 120 },
+  stats: { hp: 1058, atk: 511, def: 573, speed: 101, critRate: 5, critDmg: 50, taunt: 125, energy: 120 },
   skills: [
     { type: "普攻", name: "极寒的弓矢", description: "对指定敌方单体造成等同于三月七攻击力 50% 的冰属性伤害。" },
     { type: "战技", name: "可爱即正义", description: "为指定我方单体提供等同于三月七防御力 64%+80 的护盾，持续 3 回合。" },
