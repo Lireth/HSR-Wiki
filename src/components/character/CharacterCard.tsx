@@ -1,10 +1,11 @@
 import { GitCompareArrows, Star } from "lucide-react";
+import { memo } from "react";
 import { Link } from "react-router";
 import type { Character } from "../../types/character";
 import { cn } from "../../utils/cn";
-import { StarRating } from "../neo";
+import { SafeImage, StarRating } from "../neo";
 
-export function CharacterCard({ character, compareIds, onToggleCompare }: {
+export const CharacterCard = memo(function CharacterCard({ character, compareIds, onToggleCompare }: {
   character: Character;
   compareIds: string[];
   onToggleCompare: (id: string) => void;
@@ -14,7 +15,7 @@ export function CharacterCard({ character, compareIds, onToggleCompare }: {
     <div className="relative">
       <Link to={`/characters/${character.id}`} className="block border-4 border-black bg-white shadow-neo-md card-lift">
         <div className="relative" style={{ backgroundColor: character.color }}>
-          <img src={character.portrait} alt={character.name} className="aspect-3/4 w-full object-cover" loading="lazy" />
+          <SafeImage src={character.portrait} alt={character.name} className="aspect-3/4 w-full object-cover" loading="lazy" />
           <span className="absolute top-2 left-2 border-2 border-black bg-white px-1.5 font-black">
             <StarRating value={character.rarity} size={12} />
           </span>
@@ -39,4 +40,4 @@ export function CharacterCard({ character, compareIds, onToggleCompare }: {
       {selected && <Star className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-12 w-12 fill-neo-accent stroke-black" strokeWidth={2.5} />}
     </div>
   );
-}
+});

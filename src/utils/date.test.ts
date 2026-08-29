@@ -13,6 +13,12 @@ describe("date utils", () => {
     expect(toISODate(parseISODate("2026-01-05"))).toBe("2026-01-05");
   });
 
+  it("parseISODate 拒绝非法输入（格式错误 / 不存在的日期）", () => {
+    for (const bad of ["", "2026-9-2", "2026/09/02", "2026-13-01", "2026-02-30", "abc"]) {
+      expect(() => parseISODate(bad), bad).toThrow(RangeError);
+    }
+  });
+
   it("daysBetween 同日为 0，跨年正确", () => {
     const a = parseISODate("2026-09-02");
     expect(daysBetween(a, a)).toBe(0);

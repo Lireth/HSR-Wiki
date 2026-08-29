@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { useSearchParams } from "react-router";
 import { PageHeader } from "../components/layout/PageHeader";
 import { CalendarFilterBar } from "../components/calendar/CalendarFilterBar";
 import { CalendarGrid } from "../components/calendar/CalendarGrid";
@@ -9,18 +8,19 @@ import { EVENT_TYPE_META, filterEvents, getReminderGroups } from "../services/ca
 import { CALENDAR_EVENTS } from "../data/calendar-events";
 import type { CalendarEvent, EventType } from "../types/calendar";
 import { isSameDay } from "../utils/date";
+import { useArrayParam, useStringParam } from "../hooks/useQueryFilters";
 
 export default function CalendarPage() {
-  const today = new Date();
-  const [params] = useSearchParams();
+  // 页面存续期间"今天"固定为打开时刻，避免每次渲染新建 Date 导致下游 memo 全部失效
+  const [today] = useState(() => new Date());
+  const [types] = useArrayParam<EventType>("types");
+  const [version] = useStringParam("version");
   const [cursor, setCursor] = useState({ year: today.getFullYear(), month: today.getMonth() + 1 });
   const [selected, setSelected] = useState<CalendarEvent | null>(null);
 
-  const types = (params.get("types")?.split(",").filter(Boolean) ?? []) as EventType[];
-  const version = params.get("version") ?? "";
-  const filtered = useMemo(() => filterEvents(CALENDAR_EVENTS, { types, version }), [params]);
-  const groups = getReminderGroups(CALENDAR_EVENTS, today);
-  const versions = [...new Set(CALENDAR_EVENTS.map((e) => e.version).filter((v): v is string => Boolean(v)))];
+  const filtered = useMemo(() => filterEvents(CALENDAR_EVENTS, { types, version }), [types, version]);
+  const groups = useMemo(() => getReminderGroups(CALENDAR_EVENTS, today), [today]);
+  const versions = useMemo(() => [...new Set(CALENDAR_EVENTS.map((e) => e.version).filter((v): v is string => Boolean(v)))], []);
 
   const shift = (delta: number) => {
     const m = cursor.month - 1 + delta;

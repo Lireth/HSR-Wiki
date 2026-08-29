@@ -1,4 +1,5 @@
-import { getEventsOnDate } from "../../services/calendarService";
+import { useMemo } from "react";
+import { getEventsOnParsedDate, parseEvents } from "../../services/calendarService";
 import type { CalendarEvent } from "../../types/calendar";
 import { getMonthGrid, isSameDay } from "../../utils/date";
 import { EventBadge } from "./EventBadge";
@@ -13,7 +14,9 @@ export function CalendarGrid({ year, month, events, today, selectedId, onSelect 
   selectedId?: string;
   onSelect: (event: CalendarEvent) => void;
 }) {
-  const grid = getMonthGrid(year, month);
+  // 预解析一次起止时间戳，42 格查询只做数值比较，避免每格重复解析全部事件
+  const parsed = useMemo(() => parseEvents(events), [events]);
+  const grid = useMemo(() => getMonthGrid(year, month), [year, month]);
 
   return (
     <div className="border-4 border-black bg-white shadow-neo-lg">
@@ -26,7 +29,7 @@ export function CalendarGrid({ year, month, events, today, selectedId, onSelect 
         {grid.map((d, i) => {
           const inMonth = d.getMonth() === month - 1;
           const isToday = isSameDay(d, today);
-          const dayEvents = getEventsOnDate(d, events);
+          const dayEvents = getEventsOnParsedDate(d, parsed);
           return (
             <div key={i} className={`min-h-24 border-b-4 border-r-4 border-black p-1.5 [&:nth-child(7n)]:border-r-0 ${inMonth ? "" : "opacity-40"}`}>
               <div className={`mb-1 inline-flex h-7 w-7 items-center justify-center border-2 border-black font-black text-sm ${isToday ? "bg-neo-secondary" : "bg-white"}`}>

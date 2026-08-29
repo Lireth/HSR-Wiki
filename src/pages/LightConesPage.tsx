@@ -12,7 +12,7 @@ import type { LightConeRarity } from "../types/lightcone";
 import { useArrayParam, useStringParam } from "../hooks/useQueryFilters";
 
 export default function LightConesPage() {
-  const [params, setParams] = useSearchParams();
+  const [, setParams] = useSearchParams();
   const [keyword] = useStringParam("q");
   const [paths] = useArrayParam("paths");
   const [raritiesRaw] = useArrayParam("rarities");
@@ -26,7 +26,7 @@ export default function LightConesPage() {
         rarities: raritiesRaw.map(Number).filter((r): r is LightConeRarity => r === 3 || r === 4 || r === 5),
         sort: sort as LightConeSortKey,
       }),
-    [params]
+    [keyword, paths, raritiesRaw, sort]
   );
 
   return (

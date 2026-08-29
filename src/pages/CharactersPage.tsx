@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useSearchParams } from "react-router";
 import { PageHeader } from "../components/layout/PageHeader";
 import { CharacterCard } from "../components/character/CharacterCard";
@@ -13,7 +13,7 @@ import type { Element, Path, Rarity } from "../types/character";
 import { useArrayParam, useStringParam } from "../hooks/useQueryFilters";
 
 export default function CharactersPage() {
-  const [params, setParams] = useSearchParams();
+  const [, setParams] = useSearchParams();
   const [keyword] = useStringParam("q");
   const [elements] = useArrayParam("elements");
   const [paths] = useArrayParam("paths");
@@ -30,19 +30,22 @@ export default function CharactersPage() {
         rarities: raritiesRaw.map(Number).filter((r): r is Rarity => r === 4 || r === 5),
         sort: sort as CharacterSortKey,
       }),
-    [params]
+    [keyword, elements, paths, raritiesRaw, sort]
   );
-  const compareChars = getCharactersByIds(CHARACTERS, compare);
+  const compareChars = useMemo(() => getCharactersByIds(CHARACTERS, compare), [compare]);
 
-  const toggleCompare = (id: string) => {
-    const next = compare.includes(id) ? compare.filter((c) => c !== id) : compare.length < 2 ? [...compare, id] : compare;
-    setParams((prev) => {
-      const p = new URLSearchParams(prev);
-      if (next.length) p.set("compare", next.join(","));
-      else p.delete("compare");
-      return p;
-    });
-  };
+  const toggleCompare = useCallback(
+    (id: string) => {
+      const next = compare.includes(id) ? compare.filter((c) => c !== id) : compare.length < 2 ? [...compare, id] : compare;
+      setParams((prev) => {
+        const p = new URLSearchParams(prev);
+        if (next.length) p.set("compare", next.join(","));
+        else p.delete("compare");
+        return p;
+      });
+    },
+    [compare, setParams]
+  );
 
   return (
     <>

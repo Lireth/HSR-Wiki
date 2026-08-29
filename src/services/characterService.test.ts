@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Character } from "../types/character";
-import { filterCharacters, getCharactersByIds } from "./characterService";
+import { buildCharacterIndex, filterCharacters, getCharactersByIds } from "./characterService";
 
 const c = (over: Partial<Character> & { id: string; name: string }): Character => ({
   rarity: 5,
@@ -51,5 +51,14 @@ describe("getCharactersByIds", () => {
   it("按入参顺序返回，忽略未知 id", () => {
     const r = getCharactersByIds(FIXTURES, ["b", "zzz", "a"]);
     expect(r.map((x) => x.id)).toEqual(["b", "a"]);
+  });
+});
+
+describe("buildCharacterIndex", () => {
+  it("按 id 索引，查找结果与线性查找一致", () => {
+    const idx = buildCharacterIndex(FIXTURES);
+    expect(idx.size).toBe(FIXTURES.length);
+    expect(idx.get("b")?.name).toBe("停云");
+    expect(idx.get("zzz")).toBeUndefined();
   });
 });

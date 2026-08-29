@@ -1,7 +1,10 @@
 import type { Character } from "../../types/character";
 import { LIGHTCONES } from "../../data/lightcones";
-import { NeoPanel } from "../neo";
+import { buildLightConeIndex } from "../../services/lightconeService";
+import { NeoPanel, SafeImage } from "../neo";
 import { Link } from "react-router";
+
+const LIGHTCONE_INDEX = buildLightConeIndex(LIGHTCONES);
 
 const STAT_ROWS: { label: string; get: (c: Character) => number; fmt?: (v: number) => string }[] = [
   { label: "生命值", get: (c) => c.stats.hp },
@@ -21,7 +24,7 @@ export function CompareTable({ a, b }: { a: Character; b: Character }) {
         <div className="grid grid-cols-2 gap-4 md:grid-cols-[1fr_auto_1fr]">
           {[a, b].map((c) => (
             <Link key={c.id} to={`/characters/${c.id}`} className="text-center">
-              <img src={c.portrait} alt={c.name} className="mx-auto w-28 border-4 border-black" style={{ backgroundColor: c.color }} />
+              <SafeImage src={c.portrait} alt={c.name} className="mx-auto w-28 border-4 border-black" style={{ backgroundColor: c.color }} />
               <p className="mt-2 font-black text-2xl">{c.name}</p>
               <p className="font-bold text-sm">{c.element} · {c.path} · {c.rarity}★</p>
             </Link>
@@ -48,7 +51,7 @@ export function CompareTable({ a, b }: { a: Character; b: Character }) {
                   {[a, b].map((c) => (
                     <ul key={c.id} className="font-bold">
                       {c.recommendedLightCones.map((r) => {
-                        const lc = LIGHTCONES.find((l) => l.id === r.id);
+                        const lc = LIGHTCONE_INDEX.get(r.id);
                         return (
                           <li key={r.id}>
                             {lc ? <Link to={`/lightcones/${lc.id}`} className="underline">{lc.name}</Link> : r.id} — {r.reason}

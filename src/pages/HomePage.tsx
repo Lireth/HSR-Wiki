@@ -1,14 +1,12 @@
 import { CalendarDays, ChevronRight, Sparkles, Swords, Users } from "lucide-react";
+import { useMemo } from "react";
 import { Link } from "react-router";
 import { NeoBadge, NeoButton, NeoCard } from "../components/neo";
 import { GAME_META } from "../data/game-meta";
 import { CHARACTERS } from "../data/characters";
 import { LIGHTCONES } from "../data/lightcones";
-import { filterEvents } from "../services/calendarService";
+import { getUpcomingEvents } from "../services/calendarService";
 import { CALENDAR_EVENTS } from "../data/calendar-events";
-import { parseISODate } from "../utils/date";
-
-const TODAY = new Date();
 
 function Hero() {
   return (
@@ -41,10 +39,8 @@ function Hero() {
 }
 
 function EventMarquee() {
-  const upcoming = filterEvents(CALENDAR_EVENTS, {})
-    .filter((e) => parseISODate(e.start).getTime() >= TODAY.getTime())
-    .sort((a, b) => a.start.localeCompare(b.start))
-    .slice(0, 6);
+  // 渲染期计算今天：模块级常量会在 SPA 跨天常驻时过期
+  const upcoming = useMemo(() => getUpcomingEvents(CALENDAR_EVENTS, new Date(), 6), []);
   if (upcoming.length === 0) return null;
   const items = [...upcoming, ...upcoming]; // 复制一份实现无缝滚动
   return (

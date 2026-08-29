@@ -1,10 +1,13 @@
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import { Link, useParams } from "react-router";
-import { NeoBadge, NeoButton, NeoPanel, StarRating } from "../components/neo";
+import { NeoBadge, NeoButton, NeoPanel, SafeImage, StarRating } from "../components/neo";
 import { CHARACTERS } from "../data/characters";
 import { LIGHTCONES } from "../data/lightcones";
 import { getCharacterById } from "../services/characterService";
+import { buildLightConeIndex } from "../services/lightconeService";
 import type { SkillType } from "../types/character";
+
+const LIGHTCONE_INDEX = buildLightConeIndex(LIGHTCONES);
 
 type BadgeColor = "accent" | "secondary" | "muted" | "black" | "white";
 
@@ -55,7 +58,7 @@ export default function CharacterDetailPage() {
       </Link>
       <div className="grid items-start gap-10 lg:grid-cols-[320px_1fr]">
         <div className="rotate-1 border-4 border-black p-3 shadow-neo-xl" style={{ backgroundColor: character.color }}>
-          <img src={character.portrait} alt={character.name} className="w-full border-4 border-black" />
+          <SafeImage src={character.portrait} alt={character.name} className="w-full border-4 border-black" />
         </div>
         <div>
           <div className="flex flex-wrap items-center gap-3">
@@ -109,7 +112,7 @@ export default function CharacterDetailPage() {
         <NeoPanel title="推荐光锥" headColor="black">
           <ul className="flex flex-col gap-3">
             {character.recommendedLightCones.map((r) => {
-              const lc = LIGHTCONES.find((l) => l.id === r.id);
+              const lc = LIGHTCONE_INDEX.get(r.id);
               return (
                 <li key={r.id}>
                   <Link to={`/lightcones/${r.id}`} className="flex items-center justify-between gap-2 border-4 border-black bg-white p-3 font-bold shadow-neo-sm hover:bg-neo-muted">

@@ -33,3 +33,8 @@ export function filterLightCones(cones: LightCone[], f: LightConeFilters): Light
 export function getLightConeById(cones: LightCone[], id: string): LightCone | undefined {
   return cones.find((c) => c.id === id);
 }
+
+/** 构建 id → LightCone 索引，供组件内多次查找时以 O(1) 替代反复线性扫描 */
+export function buildLightConeIndex(cones: LightCone[]): Map<string, LightCone> {
+  return new Map(cones.map((c) => [c.id, c]));
+}

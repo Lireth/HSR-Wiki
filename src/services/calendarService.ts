@@ -35,6 +35,36 @@ export function getEventsOnDate(date: Date, events: CalendarEvent[]): CalendarEv
   return events.filter((e) => parseISODate(e.start).getTime() <= t && t <= eventEndDate(e).getTime());
 }
 
+/** 预解析起止时间戳的事件，供月历 42 格高频查询复用（避免每格重复解析全部事件） */
+export interface ParsedEvent {
+  event: CalendarEvent;
+  startTs: number;
+  endTs: number;
+}
+
+export function parseEvents(events: CalendarEvent[]): ParsedEvent[] {
+  return events.map((event) => ({
+    event,
+    startTs: parseISODate(event.start).getTime(),
+    endTs: eventEndDate(event).getTime(),
+  }));
+}
+
+/** getEventsOnDate 的预解析版本：events 须先经 parseEvents 处理 */
+export function getEventsOnParsedDate(date: Date, parsed: ParsedEvent[]): CalendarEvent[] {
+  const t = date.getTime();
+  return parsed.filter((p) => p.startTs <= t && t <= p.endTs).map((p) => p.event);
+}
+
+/** 今天及之后开始的事件，按开始日期升序取前 limit 条（首页跑马灯用） */
+export function getUpcomingEvents(events: CalendarEvent[], today: Date, limit: number): CalendarEvent[] {
+  const t = today.getTime();
+  return events
+    .filter((e) => parseISODate(e.start).getTime() >= t)
+    .sort((a, b) => a.start.localeCompare(b.start))
+    .slice(0, limit);
+}
+
 export interface ReminderGroups {
   ongoing: CalendarEvent[];
   startingSoon: CalendarEvent[];
