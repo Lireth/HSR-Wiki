@@ -1,7 +1,12 @@
-/** 解析 "YYYY-MM-DD" 为本地时区当日零点（避免 UTC 偏移问题） */
+/** 解析 "YYYY-MM-DD" 为本地时区当日零点（避免 UTC 偏移问题）；非法输入抛错，由数据完整性测试兜底 */
 export function parseISODate(iso: string): Date {
-  const [y, m, d] = iso.split("-").map(Number);
-  return new Date(y, m - 1, d);
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!m) throw new RangeError(`Invalid ISO date: ${JSON.stringify(iso)}`);
+  const d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  if (Number.isNaN(d.getTime()) || d.getMonth() !== Number(m[2]) - 1 || d.getDate() !== Number(m[3])) {
+    throw new RangeError(`Invalid ISO date: ${JSON.stringify(iso)}`);
+  }
+  return d;
 }
 
 export function toISODate(d: Date): string {

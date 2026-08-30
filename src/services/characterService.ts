@@ -39,6 +39,11 @@ export function getCharacterById(chars: Character[], id: string): Character | un
   return chars.find((c) => c.id === id);
 }
 
+/** 构建 id → Character 索引，供组件内多次查找（推荐光锥/对比/关联事件）时以 O(1) 替代反复线性扫描 */
+export function buildCharacterIndex(chars: Character[]): Map<string, Character> {
+  return new Map(chars.map((c) => [c.id, c]));
+}
+
 /** 按入参顺序返回，忽略未知 id（对比功能用） */
 export function getCharactersByIds(chars: Character[], ids: string[]): Character[] {
   return ids

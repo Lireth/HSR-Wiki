@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { CalendarEvent } from "../types/calendar";
 import { parseISODate } from "../utils/date";
-import { filterEvents, getCountdown, getEventsOnDate, getReminderGroups } from "./calendarService";
+import { filterEvents, getCountdown, getEventsOnDate, getEventsOnParsedDate, getReminderGroups, getUpcomingEvents, parseEvents } from "./calendarService";
 
 const EVENTS: CalendarEvent[] = [
   { id: "a", title: "活动A", type: "event_start", start: "2026-09-02", end: "2026-09-12", version: "3.6", description: "" },
@@ -34,6 +34,31 @@ describe("getEventsOnDate", () => {
   it("跨月事件在下月仍可见", () => {
     const cross: CalendarEvent[] = [{ id: "x", title: "跨界", type: "event_start", start: "2026-08-28", end: "2026-09-02", description: "" }];
     expect(getEventsOnDate(parseISODate("2026-09-01"), cross)).toHaveLength(1);
+  });
+});
+
+describe("parseEvents + getEventsOnParsedDate", () => {
+  it("与 getEventsOnDate 结果一致", () => {
+    const parsed = parseEvents(EVENTS);
+    for (const day of ["2026-08-21", "2026-09-02", "2026-09-05", "2026-09-12", "2026-09-13"]) {
+      const d = parseISODate(day);
+      expect(getEventsOnParsedDate(d, parsed).map((e) => e.id)).toEqual(getEventsOnDate(d, EVENTS).map((e) => e.id));
+    }
+  });
+});
+
+describe("getUpcomingEvents", () => {
+  it("仅含今天及之后开始的事件，按开始日期升序并截断", () => {
+    const r = getUpcomingEvents(EVENTS, parseISODate("2026-09-01"), 2);
+    expect(r.map((e) => e.id)).toEqual(["a", "d"]); // 09-02 与 09-04 最近
+  });
+  it("今天开始的保留，过去的排除", () => {
+    const r = getUpcomingEvents(EVENTS, parseISODate("2026-09-02"), 10);
+    expect(r.map((e) => e.id)).toEqual(["a", "d", "c"]);
+    expect(r.map((e) => e.id)).not.toContain("b");
+  });
+  it("全部已结束时返回空数组", () => {
+    expect(getUpcomingEvents(EVENTS, parseISODate("2027-01-01"), 6)).toEqual([]);
   });
 });
 

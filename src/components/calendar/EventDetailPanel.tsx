@@ -1,19 +1,24 @@
 import { X } from "lucide-react";
 import { Link } from "react-router";
 import { EVENT_TYPE_META, getCountdown } from "../../services/calendarService";
+import { buildCharacterIndex } from "../../services/characterService";
+import { buildLightConeIndex } from "../../services/lightconeService";
 import type { CalendarEvent } from "../../types/calendar";
 import { CHARACTERS } from "../../data/characters";
 import { LIGHTCONES } from "../../data/lightcones";
 import { NeoPanel } from "../neo";
 import { cn } from "../../utils/cn";
 
+const CHARACTER_INDEX = buildCharacterIndex(CHARACTERS);
+const LIGHTCONE_INDEX = buildLightConeIndex(LIGHTCONES);
+
 export function EventDetailPanel({ event, today, onClose }: { event: CalendarEvent; today: Date; onClose: () => void }) {
   const meta = EVENT_TYPE_META[event.type];
   const chars = (event.relatedCharacters ?? [])
-    .map((id) => CHARACTERS.find((c) => c.id === id))
+    .map((id) => CHARACTER_INDEX.get(id))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
   const cones = (event.relatedLightCones ?? [])
-    .map((id) => LIGHTCONES.find((c) => c.id === id))
+    .map((id) => LIGHTCONE_INDEX.get(id))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
   return (

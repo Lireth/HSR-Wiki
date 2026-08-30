@@ -6,3 +6,4 @@ export { NeoSelect } from "./NeoSelect";
 export { NeoCheckbox } from "./NeoCheckbox";
 export { NeoPanel } from "./NeoPanel";
 export { StarRating } from "./StarRating";
+export { SafeImage } from "./SafeImage";

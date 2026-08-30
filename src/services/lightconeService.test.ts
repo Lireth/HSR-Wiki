@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { LightCone } from "../types/lightcone";
-import { filterLightCones, superimpositionRows } from "./lightconeService";
+import { buildLightConeIndex, filterLightCones, superimpositionRows } from "./lightconeService";
 
 const lc = (over: Partial<LightCone> & { id: string; name: string }): LightCone => ({
   rarity: 5,
@@ -42,5 +42,14 @@ describe("superimpositionRows", () => {
   it("多参数保持 5 行", () => {
     const s = lc({ id: "x", name: "x", skill: { name: "x", description: "a {0}% b {1}%", valuesBySuperimposition: [[36, 18], [42, 21], [48, 24], [54, 27], [60, 30]] } }).skill;
     expect(superimpositionRows(s)).toEqual([[36, 18], [42, 21], [48, 24], [54, 27], [60, 30]]);
+  });
+});
+
+describe("buildLightConeIndex", () => {
+  it("按 id 索引，查找结果与线性查找一致", () => {
+    const idx = buildLightConeIndex(FIXTURES);
+    expect(idx.size).toBe(FIXTURES.length);
+    expect(idx.get("a")?.name).toBe("于夜色中");
+    expect(idx.get("zzz")).toBeUndefined();
   });
 });

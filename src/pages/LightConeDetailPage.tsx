@@ -1,10 +1,13 @@
 import { ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router";
-import { NeoBadge, NeoButton, NeoPanel, StarRating } from "../components/neo";
+import { NeoBadge, NeoButton, NeoPanel, SafeImage, StarRating } from "../components/neo";
 import { SuperimpositionTable } from "../components/lightcone/SuperimpositionTable";
 import { CHARACTERS } from "../data/characters";
 import { LIGHTCONES } from "../data/lightcones";
 import { getLightConeById } from "../services/lightconeService";
+import { buildCharacterIndex } from "../services/characterService";
+
+const CHARACTER_INDEX = buildCharacterIndex(CHARACTERS);
 
 export default function LightConeDetailPage() {
   const { id } = useParams();
@@ -26,7 +29,7 @@ export default function LightConeDetailPage() {
       </Link>
       <div className="grid items-start gap-10 lg:grid-cols-[300px_1fr]">
         <div className="-rotate-1 border-4 border-black bg-neo-muted p-3 shadow-neo-xl">
-          <img src={cone.art} alt={cone.name} className="w-full border-4 border-black" />
+          <SafeImage src={cone.art} alt={cone.name} className="w-full border-4 border-black" />
         </div>
         <div>
           <div className="flex flex-wrap items-center gap-3">
@@ -66,7 +69,7 @@ export default function LightConeDetailPage() {
         <NeoPanel title="适用角色推荐" headColor="muted">
           <ul className="flex flex-col gap-3">
             {cone.recommendedCharacters.map((r) => {
-              const c = CHARACTERS.find((x) => x.id === r.id);
+              const c = CHARACTER_INDEX.get(r.id);
               return (
                 <li key={r.id}>
                   <Link to={`/characters/${r.id}`} className="block border-4 border-black bg-white p-3 font-bold shadow-neo-sm hover:bg-neo-muted">

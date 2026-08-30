@@ -1,10 +1,13 @@
 import { GitCompareArrows, Trash2 } from "lucide-react";
 import { CHARACTERS } from "../../data/characters";
+import { buildCharacterIndex } from "../../services/characterService";
+
+const CHARACTER_INDEX = buildCharacterIndex(CHARACTERS);
 
 export function CompareBar({ ids, onToggle, onClear }: { ids: string[]; onToggle: (id: string) => void; onClear: () => void }) {
   if (ids.length === 0) return null;
   const chars = ids
-    .map((id) => CHARACTERS.find((c) => c.id === id))
+    .map((id) => CHARACTER_INDEX.get(id))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
   return (
     <div className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-3 border-4 border-black bg-neo-secondary px-4 py-3 shadow-neo-xl">
